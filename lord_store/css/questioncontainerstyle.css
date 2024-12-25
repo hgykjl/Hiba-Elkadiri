@@ -1,0 +1,107 @@
+:root {
+  --container-bg: #fff;
+  --container-shadow: rgba(0, 0, 0, 0.1);
+  --container-text: #333;
+  --item-border: #eee;
+  --item-hover-color: #007bff;
+  --answer-text: #333;
+  --answer-link: #007bff;
+  --answer-link-hover: underline;
+  --bottom-border: rgba(255, 255, 255, 0.3);
+  --bottom-text: #fff;
+}
+
+.question-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--container-bg);
+  box-shadow: 0 5px 15px var(--container-shadow);
+  border-radius: 8px;
+}
+
+.question-container h1 {
+  font-size: 2.5em;
+  text-align: center;
+  color: var(--container-text);
+  margin-bottom: 30px;
+}
+
+.question-items {
+  margin-top: 20px;
+}
+
+.question-item {
+  border-bottom: 1px solid var(--item-border);
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.question-item:last-child {
+  border-bottom: none;
+}
+
+.question-question {
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.question-question:hover {
+  color: var(--item-hover-color);
+}
+
+.question-question::after {
+  content: '+';
+  font-size: 20px;
+  color: var(--item-hover-color);
+  transition: transform 0.3s ease;
+}
+
+.question-answer {
+  color: var(--answer-text);
+  display: none;
+  margin-top: 10px;
+  padding-left: 20px;
+  transition: all 0.4s ease-out;
+}
+
+.question-answer a {
+  color: var(--answer-link);
+  text-decoration: none;
+}
+
+.question-answer a:hover {
+  text-decoration: var(--answer-link-hover);
+}
+
+.question-item.active .question-answer {
+  display: block;
+  padding: 10px 0;
+}
+
+.question-item.active .question-question::after {
+  transform: rotate(45deg);
+}
+
+/* Smooth scrolling for better user experience */
+.question-answer {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.question-item.active .question-answer {
+  max-height: 1000px; /* large enough to fit content */
+}
+
+@media (max-width: 768px) {
+  .question-container {
+    width: 80%;
+  }
+}

@@ -1,0 +1,42 @@
+:root {
+    --button-border-color: #5aa8fb;
+    --button-bg-color: #fff;
+    --button-hover-color: #007bff;
+    --svg-fill-color: currentColor;
+}
+
+.prev,
+.next {
+    border: 2px solid var(--button-border-color);
+    background-color: var(--button-bg-color);
+    padding: 10px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.prev-slider-images,
+.prev-slider-cards {
+    left: 10px;
+}
+
+.next-slider-images,
+.next-slider-cards {
+    right: 10px;
+}
+.prev:hover,
+.next:hover {
+    border: 2px solid var(--button-hover-color);
+}
+
+  /* SVG styles for better visibility */
+svg {
+    fill: var(--svg-fill-color);
+    width: 20px; /* Increased size for better visibility */
+}

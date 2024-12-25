@@ -1,0 +1,224 @@
+/* Global Variables */
+:root {
+    /* Color Scheme */
+    --primary-color: #5b8bf7;
+    --primary-color-hover: #4677f3;
+    --background-color: #fafafa;
+    --text-color: #424242;
+    --border-color: #e0e0e0;
+    --input-border-color: #d2d6da;
+    --input-border-color-focus: rgba(91, 139, 247, 0.5);
+    --footer-text-color: #9da3a8;
+    --footer-bg-start: #6e8efb; /* New */
+    --footer-bg-end: #a777e3; /* New */
+    --footer-link-color: #ffffff;
+
+    /* Typography */
+    --font-family: 'Roboto', sans-serif;
+    --font-size-large: 32px;
+    --font-size-regular: 25px;
+    --font-size-small: 14px;
+
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-regular: 15px;
+    --spacing-medium: 20px;
+    --spacing-large: 40px;
+    --margin-auto: 0 auto;
+
+    /* Shadows */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    margin: var(--spacing-medium) var(--margin-auto);
+    padding: 0;
+    justify-content: center;
+}
+
+/* Container Styles */
+.center-container {
+    max-width: 400px;
+    margin: var(--margin-auto);
+    padding: var(--spacing-large);
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+}
+
+.linklogo {
+    font-size: var(--font-size-large);
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: var(--spacing-large);
+    display: block;
+    padding: var(--spacing-large);
+    text-align: center;
+    transition: color 0.2s ease;
+}
+
+.linklogo:hover {
+    color: var(--primary-color-hover);
+}
+
+/* Form Styles */
+.form-box {
+    margin-top: var(--spacing-medium);
+}
+
+.form-control {
+    margin-bottom: var(--spacing-medium);
+    text-align: left;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: var(--spacing-small);
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.form-control input {
+    width: 100%;
+    padding: var(--spacing-regular) var(--spacing-medium);
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--input-border-color-focus);
+    outline: none;
+}
+
+/* Button Styles */
+.input-group {
+    position: relative;
+}
+
+button {
+    width: 100%;
+    padding: var(--spacing-regular) 0;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: var(--spacing-medium);
+    margin-bottom: var(--spacing-small);
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--primary-color-hover);
+}
+
+/* Switch Form Styles */
+.switch-form {
+    padding: var(--spacing-medium);
+    text-align: center;
+}
+
+.switch-form a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.switch-form a:hover {
+    color: var(--primary-color-hover);
+}
+
+/* Footer Styles */
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: var(--spacing-medium) 0; /* Increased padding for better spacing */
+    font-size: var(--font-size-small);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer a {
+    color: var(--footer-link-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-weight: bold; /* Make the links bold for better visibility */
+}
+
+.footer a:hover {
+    color: var(--primary-color-hover);
+    text-decoration: underline; /* Underline links on hover for better indication */
+}
+
+/* Toggle Password Styles */
+.toggle-password {
+    cursor: pointer;
+    position: absolute;
+    right: var(--spacing-regular);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toggle-password svg {
+    width: 20px;
+    height: 20px;
+}
+
+.toggle-password:hover svg { /* Hover effect for toggle-password */
+    fill: var(--primary-color-hover);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 580px) {
+    body {
+        background-color: #fff;
+        margin: var(--spacing-small);
+    }
+
+    .center-container {
+        padding: 0;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+    }
+
+    .logo-link,
+    .linklogo {
+        font-size: var(--font-size-regular);
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--primary-color);
+        display: block;
+        padding: var(--spacing-regular);
+        text-align: center;
+        transition: color 0.2s ease;
+    }
+
+    .logo-link:hover,
+    .linklogo:hover {
+        color: var(--primary-color-hover);
+    }
+
+    .linklogo {
+        margin-top: var(--spacing-medium);
+    }
+
+}

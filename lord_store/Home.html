@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navstyle.css">
+    <link rel="stylesheet" href="css/nextpevrstyle.css">
+    <link rel="stylesheet" href="css/sliderstyle.css">
+    <link rel="stylesheet" href="css/cardstyle.css">
+    <link rel="stylesheet" href="css/cardscontainerstyle.css">
+    <link rel="stylesheet" href="css/questioncontainerstyle.css">
+    <link rel="stylesheet" href="css/footerstyle.css">
+    <link rel="stylesheet" href="css/containertabstyle.css">
+    <!-- -------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    
+  <header class="navbar">
+    <div class="navtop">
+      <div class="logo-container">
+        <a href="#" class="logo">ALFA EVE</a>
+      </div>
+      <span aria-hidden="true" class="navOpenBtn" aria-label="Toggle Navigation Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+          <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+        </svg>
+      </span>
+      
+      <nav class="menu-container">
+        <ul class="menu-list">
+          <li><a href="Home.html" class="active-nav">Home</a></li>
+          <li><a href="#">Video</a></li>
+          <li><a href="#">Chat</a></li>
+          <li><a href="#">Developers
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+            </svg></a>
+            <ul style="z-index: 1;">
+              <li><a href="#">problem slove</a></li>
+              <li><a href="#">open source</a></li>
+              <li><a href="#">Developers ideas</a></li>
+              <li><a href="#">Developers hepls</a></li>
+              <li><a href="#">download applications</a></li>
+            </ul>
+          </li>
+          <li><a href="#">More
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                </svg>
+              </a>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <!-- <li><a href="#" class="menu-list-s00l">learing<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg></a>
+                <ul>
+                    <li><a href="#">learing web Developers</a></li>
+                    <li><a href="#">learing app Developers</a></li>
+                </ul>
+              </li> -->
+              <li><a href="#">be saller</a></li>
+              <li><a href="#">Find jod</a></li>
+              <li><a href="#">Images</a></li>
+              <li><a href="#">Live</a></li>
+              <li><a href="#">Cloud storage</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Edite video and images</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="login login-list">
+              <a href="sites/login/login.html" class="login-link">Log In</a>
+              <a href="sites/login/signup.html" class="signup-link">Sign Up</a>
+          </div>
+          </li>
+        </ul>
+      </nav>
+      <div class="login">
+        <a href="sites/login/login.html" class="login-link">Log In</a>
+        <a href="sites/login/signup.html" class="signup-link" style="border: solid 1px #3498db; padding:4px ; border-radius: 4px;">Sign Up</a>
+      </div>
+    </div>
+    <div class="navbottom">
+
+        <div class="search-container">
+          <form action="php/search.php" method="get" class="search-php">
+              <label for="searchInput" class="visually-hidden">Search</label>
+              <input type="text" placeholder="Search..." class="search-input" id="searchInput" name="query" autocomplete="off" required aria-label="Search input">
+              <button type="submit" class="search-btn" id="searchBtn" aria-label="Search button">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                  </svg>
+              </button>
+          </form>
+        </div>
+      
+    </div>
+  </header>
+
+
+    <section>
+
+      <div class="slider-container">
+        <div class="slide fade">
+          <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" alt="Image 1">
+        </div>
+        <div class="slide fade">
+          <img src="images/1696520132-70566.png" alt="Image 2">
+        </div>
+        <div class="slide fade">
+          <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" alt="Image 3">
+        </div>
+
+        <span aria-hidden="true" class="prev prev-slider-images" onclick="plusSlides(-1)">
+          <svg viewBox="0 0 16 16">
+            <path d="M9.53 11.71 5.99 8.18a.25.25 0 0 1 0-.36L9.53 4.3a.75.75 0 1 0-1.06-1.06L4.93 6.76c-.68.69-.68 1.8 0 2.48l3.54 3.53a.75.75 0 0 0 1.06-1.06z"></path>
+          </svg>
+        </span>
+      
+        <span aria-hidden="true" class="next next-slider-images" onclick="plusSlides(1)">
+          <svg viewBox="0 0 16 16">
+            <path d="m6.47 4.29 3.54 3.53c.1.1.1.26 0 .36L6.47 11.7a.75.75 0 1 0 1.06 1.06l3.54-3.53c.68-.69.68-1.8 0-2.48L7.53 3.23a.75.75 0 0 0-1.06 1.06z"></path>
+          </svg>
+        </span>
+
+      </div>
+      <br>
+      <div class="parent-container">
+        <div style="text-align: center; background-color: #ffffff; border-radius: 30px; display: inline-block; margin: auto; user-select: none;">
+          <span class="dots-slide" onclick="currentSlide(1)"></span> 
+          <span class="dots-slide" onclick="currentSlide(2)"></span> 
+          <span class="dots-slide" onclick="currentSlide(3)"></span> 
+        </div>
+      </div>
+      
+      
+
+          <div class="card-cards-slides">
+            <a class="card-cards-slides-title" title="card">card</a>       
+            <div class="slider-container" role="region" aria-label="Card Carousel">
+                <span aria-hidden="true" class="prev prev-slider-cards next-prev-hide" onclick="moveSlide(-1)">
+                    <svg viewBox="0 0 16 16">
+                        <path d="M9.53 11.71 5.99 8.18a.25.25 0 0 1 0-.36L9.53 4.3a.75.75 0 1 0-1.06-1.06L4.93 6.76c-.68.69-.68 1.8 0 2.48l3.54 3.53a.75.75 0 0 0 1.06-1.06z"></path>
+                    </svg>
+                </span>
+                <div class="slider-wrapper">
+                    <!-- Repeat this block for each card -->
+                    <div class="card-card">
+                        <div class="card-image">
+                            <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" alt="Card Name">
+                        </div>
+                        <div class="card-info">
+                            <a class="card-title">Card Name</a><br>
+                            <a class="card-button" href="#">Buy</a>
+                        </div>
+                    </div>
+
+                    <div class="card-card">
+                      <div class="card-image">
+                          <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" alt="Card Name">
+                      </div>
+                      <div class="card-info">
+                          <a class="card-title">Card Name</a><br>
+                          <a class="card-button" href="#">Buy</a>
+                      </div>
+                  </div>
+
+                  <div class="card-card">
+                    <div class="card-image">
+                        <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" alt="Card Name">
+                    </div>
+                    <div class="card-info">
+                        <a class="card-title">Card Name</a><br>
+                        <a class="card-button" href="#">Buy</a>
+                    </div>
+                </div>
+
+                <div class="card-card">
+                  <div class="card-image">
+                      <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" alt="Card Name">
+                  </div>
+                  <div class="card-info">
+                      <a class="card-title">Card Name</a><br>
+                      <a class="card-button" href="#">Buy</a>
+                  </div>
+              </div>
+
+              <div class="card-card">
+                <div class="card-image">
+                    <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" alt="Card Name">
+                </div>
+                <div class="card-info">
+                    <a class="card-title">Card Name</a><br>
+                    <a class="card-button" href="#">Buy</a>
+                </div>
+            </div>
+                    <!-- Additional card blocks here -->
+                </div>
+                <span aria-hidden="true" class="next next-slider-cards next-prev-hide" onclick="moveSlide(1)">
+                    <svg viewBox="0 0 16 16">
+                        <path d="m6.47 4.29 3.54 3.53c.1.1.1.26 0 .36L6.47 11.7a.75.75 0 1 0 1.06 1.06l3.54-3.53c.68-.69.68-1.8 0-2.48L7.53 3.23a.75.75 0 0 0-1.06 1.06z"></path>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        
+        <div class="card-cards-container">
+          <a href="#" class="card-cards-container-title">ALFA</a>
+          <!-- Card 1 -->
+          <div class="card">
+            <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" alt="Avatar" class="card-img">
+            <div class="card-content">
+              <h4 class="card-title"><b>John Doe</b></h4>
+              <p class="card-text">Architect & Engineer</p>
+            </div>
+          </div>
+        
+          <div class="card">
+            <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" alt="Avatar" class="card-img">
+            <div class="card-content">
+              <h4 class="card-title"><b>John Doe</b></h4>
+              <p class="card-text">Architect & Engineer</p>
+            </div>
+          </div>
+        
+          <div class="card">
+            <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" alt="Avatar" class="card-img">
+            <div class="card-content">
+              <h4 class="card-title"><b>John Doe</b></h4>
+              <p class="card-text">Architect & Engineer</p>
+            </div>
+          </div>
+        
+          <div class="card">
+            <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" alt="Avatar" class="card-img">
+            <div class="card-content">
+              <h4 class="card-title"><b>John Doe</b></h4>
+              <p class="card-text">Architect & Engineer</p>
+            </div>
+          </div>
+        
+          
+          
+        </div>
+              
+              
+
+          </div>
+
+          <div class="question-container">
+            <section class="question-items">
+              <h1>Why Us</h1>
+              <article class="question-item">
+                <div class="question-question">What is Lord Store?</div>
+                <p class="question-answer">
+                  Lord Store is an online platform where you can buy, exchange, and sell a variety of items.
+                </p>
+              </article>
+              
+              <article class="question-item">
+                <div class="question-question">Lord Store and Money back?</div>
+                <p class="question-answer">
+                  The Lord store promises a money-back guarantee within 7 days. Find out more.
+                </p>
+              </article>
+              
+              <article class="question-item">
+                <div class="question-question">Team Support in Lord Store?</div>
+                <p class="question-answer">
+                  Support is available 24/7 at Lord Store for 7 days.
+                </p>
+              </article>
+            </section>
+          </div>
+
+
+          <div class="containertab">
+            <h2>Tabs</h2>          
+            <div class="tab-container"> 
+              <span aria-hidden="true" class="prev prev-slider-tab next-prev-hide" onclick="moveSlide(-1)" style="position: absolute;left:0px; ">
+                <svg viewBox="0 0 16 16">
+                    <path d="M9.53 11.71 5.99 8.18a.25.25 0 0 1 0-.36L9.53 4.3a.75.75 0 1 0-1.06-1.06L4.93 6.76c-.68.69-.68 1.8 0 2.48l3.54 3.53a.75.75 0 0 0 1.06-1.06z"></path>
+                </svg>
+              </span>              
+              <div class="tab">
+                <button class="tablinks active" data-tab="firstTablinksContent">London</button>
+                <button class="tablinks" data-tab="secondTablinksContent">Paris</button>
+                <button class="tablinks" data-tab="thirdTablinksContent">Tokyo</button>
+                <button class="tablinks" data-tab="fourTablinksContent">New York</button>
+                <button class="tablinks" data-tab="zaki">lord push</button>
+              </div>
+              <span aria-hidden="true" class="next next-slider-tab next-prev-hide" onclick="moveSlide(1)" style="position: absolute;   right: 0px;">
+                <svg viewBox="0 0 16 16">
+                    <path d="m6.47 4.29 3.54 3.53c.1.1.1.26 0 .36L6.47 11.7a.75.75 0 1 0 1.06 1.06l3.54-3.53c.68-.69.68-1.8 0-2.48L7.53 3.23a.75.75 0 0 0-1.06 1.06z"></path>
+                </svg>
+            </span>
+            </div>
+          
+            <div id="firstTablinksContent" class="tabcontent" style="display:block;">
+              <h3>London</h3>
+              <p>London is the capital city of England.</p>
+              <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" style="width: 30%;" alt="">
+            </div>
+          
+            <div id="secondTablinksContent" class="tabcontent">
+              <h3>Paris</h3>
+              <p>Paris is the capital of France.</p> 
+            </div>
+          
+            <div id="thirdTablinksContent" class="tabcontent">
+              <h3>Tokyo</h3>
+              <p>Tokyo is the capital of Japan.</p>
+            </div>
+            
+            <div id="fourTablinksContent" class="tabcontent">
+              <h3>New York</h3>
+              <p>New York is a major city in the United States.</p>
+            </div>
+
+            <div id="zaki" class="tabcontent">
+              <h3>lordpush</h3>
+              <p>that is me.</p>
+            </div>
+          </div>
+    </section>
+      
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h2>Follow Us</h2>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li><br>
+            <li><a href="#"><i class="fab fa-telegram-plane"></i></a></li><br>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li><br>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h2>Contact</h2>
+          <p>Email: info@lordstore.com</p>
+          <p>Phone: +123 456 7890</p>
+          <p>Telegram: +123 456 7890</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Lord Store. All rights reserved.</p>
+      </div>
+    </footer>
+
+</body>
+<script src="js/script.js"></script>
+<script src="js/searchScript.js"></script>
+<script src="js/searchWords.js"></script>
+</html>

@@ -1,0 +1,65 @@
+:root {
+  --container-bg: #fff;
+  --container-text: #333;
+  --tab-bg: #e9e9e9;
+  --tab-active-bg: #3498db;
+  --tab-active-text: #fff;
+  --tabcontent-border: #fff;
+}
+
+.card-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--container-bg);
+  max-width: 100%;
+  margin: auto;
+}
+
+.card-cards-container .card-cards-container-title {
+  grid-column: 1 / -1;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+  color: var(--container-text);
+}
+
+.card-cards-container .card {
+  background: var(--container-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-cards-container .card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-cards-container .card-content {
+  padding: 20px;
+}
+
+.card-cards-container .card-title {
+  margin: 0;
+  color: var(--container-text);
+  font-size: 1.5rem;
+}
+
+.card-cards-container .card-text {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 480px) {
+  .card-cards-container .card {
+    width: 100%; /* One card per row */
+  }
+}

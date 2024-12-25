@@ -1,0 +1,130 @@
+:root {
+  --container-bg: #fff;
+  --container-shadow: rgba(0, 0, 0, 0.1);
+  --container-text: #333;
+  --item-border: #eee;
+  --item-hover-color: #007bff;
+  --answer-text: #333;
+  --answer-link: #007bff;
+  --answer-link-hover: underline;
+  --bottom-border: rgba(255, 255, 255, 0.3);
+  --bottom-text: #fff;
+  --dot-default-color: #bbb;
+  --dot-active-color: #007bff;
+  --button-border-color: #007bff;
+  --button-bg-color: #fff;
+  --button-hover-color: #007bff;
+  --svg-fill-color: #007bff;
+}
+
+/* Slider container styling */
+.slider-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+  background-color: var(--container-bg);
+  box-shadow: 0 4px 8px var(--container-shadow);
+}
+
+/* Each slide styling */
+.slider-container .slide {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+/* Image styling */
+.slider-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  transition: transform 0.5s ease;
+}
+
+/* .slider-container img:hover {
+  transform: scale(1.2);
+} */
+
+/* Dot indicators styling */
+.dots-slide {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 6px;
+  background-color: var(--dot-default-color);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active-slide, .dots-slide:hover {
+  background-color: var(--dot-active-color);
+}
+
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Slides container */
+.slides {
+  display: flex;
+  transition: transform 1s ease-in-out; /* Adjusted transition time */
+  height: 100%;
+  will-change: transform;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+}
+
+/* Navigation buttons */
+.prev, .next {
+  border: 2px solid var(--button-border-color);
+  background-color: var(--button-bg-color);
+  padding: 10px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev-slider-images {
+  left: 10px;
+}
+
+.next-slider-images {
+  right: 10px;
+}
+
+.prev:hover, .next:hover {
+  border-color: var(--button-hover-color);
+}
+
+svg {
+  fill: var(--svg-fill-color);
+  width: 20px;
+}
+
+/* Keyframes for slide transition */
+@keyframes fade {
+  0%, 25%, 50%, 75% {opacity: 0; transform: translateX(-100%);}
+  100% {opacity: 1; transform: translateX(0);}
+}
+
+/* Hide navigation buttons on mobile screens */
+@media (max-width: 768px) {
+  .prev, .next {
+    display: none;
+  }
+}

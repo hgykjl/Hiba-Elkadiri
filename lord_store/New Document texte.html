@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <style>
+        /* Resetting margins and padding */
+        .gallery {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: 200px;
+            grid-auto-flow: dense;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (min-width: 480px) {
+            .gallery-item:first-child {
+                grid-area: 1 / 1 / span 2 / span 2;
+            }
+
+            .gallery-item:nth-child(3n) {
+                grid-column: span 2;
+            }
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content-wrapper {
+            position: relative;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="images/1696520132-70566.png" alt="A beautiful sunset over the mountains" loading="lazy" srcset="images/1696520132-70566.png 1x, images/1696520132-70566@2x.png 2x">
+            <h3>Sunset Over Mountains</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg" alt="A serene lake landscape" loading="lazy" srcset="images/8a050905-e28f-476c-a2fe-366b330a80d3.jpg 1x, images/8a050905-e28f-476c-a2fe-366b330a80d3@2x.jpg 2x">
+            <h3>Serene Lake</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="images/9e12c545-da61-4f01-a588-4d2429882d2b.jpg" alt="A vibrant cityscape" loading="lazy" srcset="images/9e12c545-da61-4f01-a588-4d2429882d2b.jpg 1x, images/9e12c545-da61-4f01-a588-4d2429882d2b@2x.jpg 2x">
+            <h3>Cityscape</h3>
+        </div>
+        <!-- Add more images as needed -->
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content-wrapper">
+            <img class="modal-content" alt="Expanded view">
+            <span class="close" aria-label="Close">&times;</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const modal = document.getElementById('modal');
+            const modalContent = modal.querySelector('.modal-content');
+            const closeButton = modal.querySelector('.close');
+        
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const imgSrc = item.querySelector('img').src;
+                    modalContent.src = imgSrc;
+                    modal.style.display = 'flex'; // Show the modal
+                });
+            });
+        
+            closeButton.addEventListener('click', () => {
+                modal.style.display = 'none'; // Hide the modal
+            });
+        
+            // Close the modal if the user clicks outside the content
+            modal.addEventListener('click', (event) => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
